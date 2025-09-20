@@ -1,6 +1,6 @@
 # POKEFUSION
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0
 
 # Vistas
 <img width="930" height="505" alt="fusion" src="https://github.com/user-attachments/assets/776df3ee-d189-4648-bdbf-234b1e64e847" />
@@ -9,7 +9,10 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 Consumir una API pokemon la cual debe generar 3 pokemones aleatorios y de esos mismos crear una tarjeta fusionada
 
 #Herramientas
-
+Angular 18
+CSS
+Material angular
+API PokeAPI
 
 ## Development server
 
