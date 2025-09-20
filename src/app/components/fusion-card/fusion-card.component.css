@@ -1,118 +1,75 @@
-/* Tarjeta principal */
 .fusion-card {
-  border: 4px solid;
-  border-image: linear-gradient(45deg, #FF0000, #FFFF00) 1; /* rojo-amarillo */
-  border-radius: 25px;
-  padding: 30px;
-  max-width: 480px;
-  margin: 20px auto;
-  background: radial-gradient(circle at top left, #fdf6e3, #fff7e1);
+  background: linear-gradient(135deg, #ffcb05, #3b4cca); /* Tonos Pokémon: amarillo y azul */
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  overflow: hidden;
+  max-width: 400px;
+  margin: 20px auto;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: glow-border 2s infinite alternate;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  animation: pulse-border 2s infinite;
 }
 
-.fusion-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-/* Animación del borde */
-@keyframes glow-border {
+/* Contorno animado rojo y amarillo */
+@keyframes pulse-border {
   0% {
-    border-image: linear-gradient(45deg, #FF0000, #FFFF00) 1;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ffff00;
   }
   50% {
-    border-image: linear-gradient(45deg, #FF9900, #FFCC00) 1;
+    box-shadow: 0 0 20px #ff0000, 0 0 30px #ffff00;
   }
   100% {
-    border-image: linear-gradient(45deg, #FF0000, #FFFF00) 1;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ffff00;
   }
 }
 
-/* Contenedor de imágenes */
+.fusion-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
 .fusion-images {
-  position: relative;
-  height: 220px;
-  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
 }
 
-/* Imágenes de Pokémon */
 .fusion-images img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
+  width: 150px; /* Imagen más grande */
+  height: 150px;
   object-fit: contain;
-  border-radius: 20px;
-  opacity: 0.85;
-  transition: all 0.8s ease;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
-  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
 }
 
-.fusion-images img.main {
-  width: 160px;
-  height: 160px;
-  opacity: 1;
-  z-index: 10;
-  animation-delay: 0s;
+.fusion-images img:hover {
+  transform: scale(1.3) rotate(10deg);
 }
 
-.fusion-images img.side:nth-child(2) {
-  width: 130px;
-  height: 130px;
-  transform: translate(-60%, -50%);
-  animation-delay: 0.3s;
+/* Texto más pequeño para stats, tipos y moves */
+.fusion-card p, 
+.fusion-card ul {
+  font-size: 0.85em;
+  margin: 5px 0;
 }
 
-.fusion-images img.side:nth-child(3) {
-  width: 130px;
-  height: 130px;
-  transform: translate(-40%, -50%);
-  animation-delay: 0.6s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
-  50% { transform: translate(-50%, -50%) translateY(-12px); }
-}
-
-/* Estadísticas */
-.stats ul {
+.fusion-card ul li {
   list-style: none;
-  padding: 0;
-  font-weight: bold;
-  color: #333;
 }
 
-/* Botón de fusionar */
-.fusion-button {
-  background: linear-gradient(45deg, #FFCB05, #3B4CCA);
-  color: white;
-  border: none;
-  padding: 16px 32px;
-  font-size: 18px;
-  border-radius: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  margin-top: 20px;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+/* Contorno de relámpago */
+.fusion-card.lightning {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0px rgba(255, 255, 0, 0.8);
+  animation: electric 0.6s ease-in-out 3;
 }
 
-.fusion-button:hover {
-  transform: scale(1.1) rotate(-3deg);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.4);
-}
-
-.fusion-button:active {
-  transform: scale(0.95) rotate(1deg);
+@keyframes electric {
+  0%   { box-shadow: 0 0 0px rgba(255,255,0,0.8), 0 0 0px rgba(255,0,0,0.8); }
+  25%  { box-shadow: 0 0 20px rgba(255,255,0,1), 0 0 10px rgba(255,0,0,1); }
+  50%  { box-shadow: 0 0 0px rgba(255,255,0,0.8), 0 0 0px rgba(255,0,0,0.8); }
+  75%  { box-shadow: 0 0 25px rgba(255,255,0,1), 0 0 15px rgba(255,0,0,1); }
+  100% { box-shadow: 0 0 0px rgba(255,255,0,0.8), 0 0 0px rgba(255,0,0,0.8); }
 }
