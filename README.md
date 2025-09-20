@@ -1,59 +1,27 @@
-# Bases
+# POKEFUSION
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0
 
-## Development server
+# Vistas
+<img width="930" height="505" alt="fusion" src="https://github.com/user-attachments/assets/776df3ee-d189-4648-bdbf-234b1e64e847" />
+<img width="1864" height="1015" alt="image" src="https://github.com/user-attachments/assets/bf08fcb3-3c14-4aae-a5f7-f3616e015df3" />
 
-To start a local development server, run:
+# Objetivo
+Consumir una API pokemon la cual debe generar 3 pokemones aleatorios y de esos mismos crear una tarjeta fusionada, asi como tambien tener un apartado para agregarlo a favoritos.
 
+# Estructura 
+<img width="418" height="525" alt="image" src="https://github.com/user-attachments/assets/f0b93a9e-4e18-46d3-97cd-6bd98670683e" />
+
+
+#Herramientas
+Angular 18
+CSS
+Material angular
+API PokeAPI
+
+## DESCARGAR E INSTALLAR
 ```bash
+git clone
+npm install
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
