@@ -1,27 +1,34 @@
 <div class="fusion-layout">
-  <!-- Columna izquierda: controles -->
+  <!-- Columna izquierda: controles + datos -->
   <div class="fusion-left">
-    <button (click)="generateFusion()" class="fusion-btn">🔀 Re-fusionar</button>
+    <button (click)="generateFusion()" class="fusion-btn" [disabled]="loading">
+      {{ loading ? "⏳ Cargando..." : "🔀 Re-fusionar" }}
+    </button>
+
+    <!-- Loader mientras carga -->
+    <div *ngIf="loading" class="pokeball-loader"></div>
+
+    <!-- Datos de la fusión -->
+    <div *ngIf="fusion && !loading" class="fusion-data">
+      <h2>{{ fusion.name | uppercase }}</h2>
+
+      <p><strong>Tipos:</strong> {{ fusion.types.join(', ') }}</p>
+
+      <p><strong>Stats:</strong></p>
+      <ul>
+        <li *ngFor="let stat of fusion | keyvalue">
+          <span *ngIf="stat.key !== 'moves' && stat.key !== 'images'">{{ stat.key }}: {{ stat.value }}</span>
+        </li>
+      </ul>
+
+      <p><strong>Movimientos:</strong> {{ fusion.moves.join(', ') }}</p>
+
+      <button (click)="addToFavorites()">⭐ Agregar a favoritos</button>
+    </div>
   </div>
 
-  <!-- Columna derecha: tarjeta -->
+  <!-- Columna derecha: tarjeta con imagen -->
   <div class="fusion-right">
-    
-    <app-fusion-card *ngIf="fusion" [fusion]="fusion"></app-fusion-card>
-   
-      <!-- Mostrar imágenes de la fusión -->
-  <div *ngIf="fusion?.images" class="fusion-images">
-    <img *ngFor="let img of fusion.images" [src]="img" alt="Pokemon image">
-    <button *ngIf="fusion" (click)="addToFavorites()">⭐ Agregar a favoritos</button>
+    <app-fusion-card *ngIf="fusion && !loading" [fusion]="fusion"></app-fusion-card>
   </div>
 </div>
-
-
-
-
-  
-
-
-
-
-
