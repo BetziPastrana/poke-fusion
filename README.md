@@ -1,6 +1,6 @@
 # POKEFUSION
 
-Es una aplicación Single Page elaborada con Angular y la API PokeApi que permite generar una nueva tarjeta apartir de 3 pokemons, asi como tambien tener un apartado para agregarlo a favoritos.
+Es una aplicación Single Page elaborada con Angular y la API PokeApi que permite generar una nueva tarjeta apartir de 3 pokemons aleatorios, asi como tambien tener un apartado para agregarlo a favoritos.
 
 # Vistas
 <img width="1864" height="1015" alt="image" src="https://github.com/user-attachments/assets/bf08fcb3-3c14-4aae-a5f7-f3616e015df3" />
