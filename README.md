@@ -9,7 +9,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 # Objetivo
 Consumir una API pokemon la cual debe generar 3 pokemones aleatorios y de esos mismos crear una tarjeta fusionada
 
-#Estructura 
+# Estructura 
 <img width="418" height="525" alt="image" src="https://github.com/user-attachments/assets/f0b93a9e-4e18-46d3-97cd-6bd98670683e" />
 
 
