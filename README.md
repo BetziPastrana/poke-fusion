@@ -10,32 +10,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 Consumir una API pokemon la cual debe generar 3 pokemones aleatorios y de esos mismos crear una tarjeta fusionada
 
 #ESTRUCTURA 
-poke-fusion/
-├── angular.json
-├── package.json
-├── tsconfig.json
-├── src/
-│   ├── main.ts
-│   ├── environments/
-│   │   └── environment.ts
-│   ├── app/
-│   │   ├── services/
-│   │   │   └── favorites.service.ts
-│   │   ├── components/
-│   │   │   ├── fusion-card/
-│   │   │   │   ├── fusion-card.component.ts
-│   │   │   │   ├── fusion-card.component.html
-│   │   │   │   └── fusion-card.component.css
-│   │   │   ├── favorites-list/
-│   │   │   │   └── favorites-list.component.ts
-│   │   │   └── pokemon-list/
-│   │   │       ├── pokemon-list.component.ts
-│   │   │       └── pokemon-list.component.html
-├── angular.json
-├── package.json
-├── firebase.json
-├── firestore.rules
-├── firestore.indexes.json
+<img width="418" height="525" alt="image" src="https://github.com/user-attachments/assets/f0b93a9e-4e18-46d3-97cd-6bd98670683e" />
+
 
 #Herramientas
 Angular 18
