@@ -1,0 +1,56 @@
+.fusion-card {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  max-width: 450px;
+  background-color: #fdfdfd;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.fusion-card h2 {
+  margin-bottom: 15px;
+}
+
+.fusion-images {
+  position: relative;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.fusion-images img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 0.8;
+  transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+/* Imagen principal más grande */
+.fusion-images img.main {
+  width: 120px;
+  height: 120px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+/* Imágenes laterales con rotación y desplazamiento */
+.fusion-images img.side:nth-child(2) {
+  transform: translate(-70%, -50%) scale(0.8) rotate(-15deg);
+}
+
+.fusion-images img.side:nth-child(3) {
+  transform: translate(-30%, -50%) scale(0.8) rotate(15deg);
+}
+
+/* Animación de hover para que se vea dinámica */
+.fusion-images:hover img {
+  transform: translate(-50%, -50%) scale(1.05) rotate(0deg);
+  opacity: 1;
+}

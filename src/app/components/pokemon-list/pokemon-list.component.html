@@ -1,0 +1,16 @@
+<div class="fusion-container">
+  <button class="fusion-button" (click)="generateFusion()">🔀 Re-fusionar</button>
+
+  <app-fusion-card [fusion]="fusion"></app-fusion-card>
+
+  <!-- Mostrar imágenes de la fusión -->
+  <div *ngIf="fusion?.images" class="fusion-images">
+    <img *ngFor="let img of fusion.images" [src]="img" alt="Pokemon image">
+  </div>
+
+  <button *ngIf="fusion" (click)="addToFavorites()">⭐ Agregar a favoritos</button>
+
+
+</div>
+
+

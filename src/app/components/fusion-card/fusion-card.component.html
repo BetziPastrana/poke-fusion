@@ -1,0 +1,28 @@
+<div *ngIf="fusion" class="fusion-card">
+  <h2>{{ fusion.name | uppercase }}</h2>
+
+  <!-- Imágenes fusionadas -->
+  <div class="fusion-images">
+    <img *ngFor="let img of fusion.images; let i = index"
+         [src]="img"
+         [ngClass]="{'main': i === 0, 'side': i !== 0}"
+         [style.zIndex]="fusion.images.length - i"
+         alt="Pokemon image">
+  </div>
+
+  <!-- Tipos -->
+  <p><strong>Tipos:</strong> {{ fusion.types.join(', ') }}</p>
+
+  <!-- Stats -->
+  <div class="stats">
+    <h3>Stats:</h3>
+    <ul>
+      <li *ngFor="let stat of fusion.stats | keyvalue">
+        {{ stat.key }}: {{ stat.value }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Movimientos -->
+  <p><strong>Moves:</strong> {{ fusion.moves.join(', ') }}</p>
+</div>
